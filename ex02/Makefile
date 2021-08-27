@@ -1,8 +1,7 @@
-NAME		=	horde
+NAME		=	brain
 
-SRCS		=	./main.cpp \
-				./Zombie.cpp \
-				./ZombieHorde.cpp
+SRCS		=	./main.cpp
+
 	
 OBJS		=	$(SRCS:.cpp=.o)
 
@@ -19,7 +18,7 @@ all :		$(NAME)
 
 $(NAME) :	$(OBJS)
 			$(CPP) $(CFLAGS) -o $(NAME) $(OBJS) -I.
-			@echo "print number of zombies as first param of program and name as second"
+			@echo "brain is done"
 
 clean :		
 			$(RM) $(OBJS)

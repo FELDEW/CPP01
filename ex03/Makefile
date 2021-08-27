@@ -1,8 +1,9 @@
-NAME		=	horde
+NAME		=	attack
 
 SRCS		=	./main.cpp \
-				./Zombie.cpp \
-				./ZombieHorde.cpp
+				./HumanA.cpp \
+				./HumanB.cpp \
+				./Weapon.cpp
 	
 OBJS		=	$(SRCS:.cpp=.o)
 
@@ -19,7 +20,7 @@ all :		$(NAME)
 
 $(NAME) :	$(OBJS)
 			$(CPP) $(CFLAGS) -o $(NAME) $(OBJS) -I.
-			@echo "print number of zombies as first param of program and name as second"
+			@echo "human attack"
 
 clean :		
 			$(RM) $(OBJS)
