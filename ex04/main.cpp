@@ -27,7 +27,8 @@ int main(int argc, char *argv[])
 			buff_str.append(line);
 			buff_str.append("\n");
 		}
-		buff_str.erase(buff_str.rfind("\n"), 1);
+		if ((pos = buff_str.rfind("\n")) != std::string::npos)
+			buff_str.erase(pos, 1);
 		in.close();
 		out_name = argv[1];
 		out_name.append(".replace");
