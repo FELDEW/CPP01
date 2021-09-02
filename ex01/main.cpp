@@ -6,6 +6,8 @@ int	main(int argc, char *argv[])
 	std::string name;
 	int N;
 
+	if (argc != 3)
+		return (1);
 	N = std::atoi(argv[1]);
 	name = argv[2];
 	horde = zombieHorde(N, name);
